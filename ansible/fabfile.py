@@ -50,7 +50,7 @@ def _bool(val):
     return bool(val)
 
 @task
-def provision(limit=None, tags=None, **extra_vars):
+def provision(limit=None, tags=None, dev=False, **extra_vars):
     '''Provision instances, including installing libraries and softwares and configure them properly
 
     Args:
@@ -58,7 +58,7 @@ def provision(limit=None, tags=None, **extra_vars):
         tags: only execute tasks matching specific tags (comma-separated)
         extra_vars: passed in as extra_vars
     '''
-    ansible_playbook('provision.yml', 'inventory/perf.yml',
+    ansible_playbook('provision.yml', 'inventory/perf-dev.yml' if dev else 'inventory/perf.yml',
                         tags=tags, limit=limit, extra_vars=extra_vars)
 
 @task

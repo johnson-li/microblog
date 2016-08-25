@@ -81,5 +81,5 @@ if __name__ == '__main__':
     from pprint import pprint
     random_id = random.randint(1,100000)
     c = Client('http://localhost:7431')
-    user = c.create_user('ryanye+{}'.format(random_id), 'yejianye+{}@gmail.com'.format(random_id), 'secret')
+    user = c.create_user('johnson+{}'.format(random_id), 'johnson+{}@gmail.com'.format(random_id), 'secret')
     pprint(user)

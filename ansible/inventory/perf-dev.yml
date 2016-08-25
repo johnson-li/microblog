@@ -1,8 +1,8 @@
 [perf-www]
-perf-www0 ansible_user=vagrant ansible_port=2202 ansible_host=localhost ansible_ssh_private_key_file=/Users/johnson/Workspace/microblog/vagrant/.vagrant/machines/default/virtualbox/private_key 
+perf-www0 ansible_user=vagrant ansible_port=2200 ansible_host=localhost ansible_ssh_private_key_file=../vagrant/.vagrant/machines/default/virtualbox/private_key 
 
 [perf-cache]
-perf-cache0 ansible_user=vagrant ansible_port=2202 ansible_host=localhost ansible_ssh_private_key_file=/Users/johnson/Workspace/microblog/vagrant/.vagrant/machines/default/virtualbox/private_key 
+perf-cache0 ansible_user=vagrant ansible_port=2200 ansible_host=localhost ansible_ssh_private_key_file=../vagrant/.vagrant/machines/default/virtualbox/private_key 
 
 [perf:children]
 perf-www

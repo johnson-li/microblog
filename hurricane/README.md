@@ -20,7 +20,7 @@ As a benchmark system, this project can be seperated into two parts in design
 - persistent part
 	- `api` each layer should provide a consistent outer interface to provide a fair contest environment
 - configurable part
-	- `implementation` 
+	- `implementation` db provider, etc
 	- `communication` different protocal, sync vs async
 	- `cache` cache can exist between any 2 layers, but the efficiency and difficulty varies a lot
 	

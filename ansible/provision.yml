@@ -8,9 +8,16 @@
 - hosts: perf-www
   sudo: True
   roles:
-    - pylibs
+      - pylibs
 
 - hosts: perf-cache
   sudo: True
   roles:
-    - redis
+      - redis
+
+- hosts: perf-all
+  sudo: True
+  roles:
+      - pylibs
+      - redis
+

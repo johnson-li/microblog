@@ -1,9 +1,6 @@
-[perf-www]
-perf-www0 ansible_user=vagrant ansible_port=2200 ansible_host=localhost ansible_ssh_private_key_file=../vagrant/.vagrant/machines/default/virtualbox/private_key 
-
-[perf-cache]
-perf-cache0 ansible_user=vagrant ansible_port=2200 ansible_host=localhost ansible_ssh_private_key_file=../vagrant/.vagrant/machines/default/virtualbox/private_key 
+[perf-all]
+devbox0 ansible_ssh_user=ubuntu ansible_ssh_port=2200 ansible_ssh_host=localhost ansible_ssh_private_key_file=../vagrant/.vagrant/machines/default/virtualbox/private_key
 
 [perf:children]
-perf-www
-perf-cache
+perf-all
+

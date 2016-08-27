@@ -58,6 +58,8 @@ def provision(limit=None, tags=None, dev=False, **extra_vars):
         tags: only execute tasks matching specific tags (comma-separated)
         extra_vars: passed in as extra_vars
     '''
+    ansible_playbook('provision-pre.yml', 'inventory/perf-dev.yml' if dev else 'inventory/perf.yml',
+                        tags=tags, limit=limit, extra_vars=extra_vars)
     ansible_playbook('provision.yml', 'inventory/perf-dev.yml' if dev else 'inventory/perf.yml',
                         tags=tags, limit=limit, extra_vars=extra_vars)
 

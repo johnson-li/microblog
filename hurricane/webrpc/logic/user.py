@@ -13,4 +13,3 @@ def get_user(user_id):
 def create_user(name, email, password, bio=''):
     data = {'email': email, 'name': name, 'password': password, 'bio': bio}
     return db.api.user.create_user(db_client, data)
-

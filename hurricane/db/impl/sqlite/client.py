@@ -1,4 +1,8 @@
+import logging
+
 import db.impl.sqlite
+
+logger = logging.getLogger(__name__)
 
 
 class Client:
@@ -8,8 +12,13 @@ class Client:
     def db_func_get_user(self, db_filter=None):
         cursor = self.conn.cursor()
         where_clause = 'where {}'.format(str(db_filter)) if db_filter else ''
-        cursor.execute('select * from {} {}'.format('user', where_clause))
-        return cursor.fetchall()
+        sql = 'select * from {} {}'.format('user', where_clause)
+        logging.warning(sql)
+        cursor.execute(sql)
+        users = cursor.fetchall()
+        columns = [i[0] for i in cursor.description]
+        users = [dict(zip(columns, user)) for user in users]
+        return users
 
     def db_func_update_user(self, update_data, db_filter=None):
         pass

@@ -10,7 +10,10 @@ def ping():
 
 
 def login(user_id, password):
-    user = webrpc.api.user.get_user(webrpc_client, user_id=user_id)
+    user = webrpc.api.user.get_user(webrpc_client, user_id=user_id)[0]
+    print user
+    if not user:
+        raise utils.exceptions.UserNotFoundException()
     if user['password'] != password:
         raise utils.exceptions.InvalidPasswordException()
     return user

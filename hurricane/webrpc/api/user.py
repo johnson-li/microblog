@@ -1,4 +1,5 @@
 def get_user(client, user_id):
+    user_id = int(user_id)
     return client.get_user(user_id=user_id)
 
 

@@ -29,7 +29,7 @@ The core of this project is to make use of various configurable parts and compar
 
 Configurable parts
 ===
-The following lists all kinds of configurable parts that the project supports or will support. `[x]` means support while `[ ]` means to be support
+The following lists all kinds of configurable parts that the project supports or will support.
 
 - db vendor
     - [x] sqlite3
